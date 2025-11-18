@@ -17,7 +17,7 @@ public class CarRun {
     car.fullBrake();
 
 
-    if (car.setLicensePlate("WO KT 730").isSome()) {
+    if (car.setLicensePlate("SAW F 265").isSome()) {
       System.out.println("Failure");
     } else {
       System.out.println("Success");

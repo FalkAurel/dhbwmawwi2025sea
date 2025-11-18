@@ -93,6 +93,10 @@ public class Car {
       return Option.some(LicensePlateError.INVALID_LENGTH);
     }
 
+    if (licensePlate.charAt(licensePlate.length() - 1) == 'e' || licensePlate.charAt(licensePlate.length() - 1) == 'E') {
+      return Option.some(LicensePlateError.WE_DONT_SUPPORT_ELECTRICAL_CARS);
+    }
+
     int buchstabenCounter = 0;
 
     for (int i = 0; i < licensePlate.length(); i++) {
